@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ESPSLab3_2/Core/Src/fir_nativ.c&apos; to &apos;fir_naive.c&apos;" description="Rename resource &apos;fir_nativ.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/fir_nativ.c" name="fir_naive.c" stamp="1751817492668" updateReferences="true"/>
+</session>

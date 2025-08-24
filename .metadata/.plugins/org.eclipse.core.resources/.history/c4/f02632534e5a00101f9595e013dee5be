@@ -1,0 +1,25 @@
+#include "fir_coeffs.h"
+#include <stdint.h>
+
+extern const int FIR_ORDER
+#define BUFFER_LEN
+volatile float circ_buf[BUFFER_LEN] = {0};
+volatile uint16_t circ_index = 0;
+
+float fir_circular(float new_sample) {
+    circ_buf[circ_index] = new_sample;
+    float acc = 0.0f;
+    int idx = circ_index;
+
+    for (int i = 0; i < BUFFER_LEN; i++) {
+        acc += fir_coeffs[i] * circ_buf[idx];
+        if (idx == 0) {
+            idx = BUFFER_LEN - 1;
+        } else {
+            idx--;
+        }
+    }
+
+    circ_index = (circ_index + 1) % BUFFER_LEN;
+    return acc;
+}

@@ -1,0 +1,20 @@
+#include "fir_coeffs.h"
+#include <stdint.h>
+
+#define BUFFER_LEN NUM_TAPS
+volatile float fir_input[BUFFER_LEN] = {0};
+
+float fir_naive(float new_sample) {
+    // Shift older samples
+    for (int i = BUFFER_LEN - 1; i > 0; i--) {
+        fir_input[i] = fir_input[i - 1];
+    }
+    fir_input[0] = new_sample;
+
+    // FIR calculation
+    float acc = 0.0f;
+    for (int i = 0; i < BUFFER_LEN; i++) {
+        acc += fir_input[i] * fir_coeffs[i];
+    }
+    return acc;
+}

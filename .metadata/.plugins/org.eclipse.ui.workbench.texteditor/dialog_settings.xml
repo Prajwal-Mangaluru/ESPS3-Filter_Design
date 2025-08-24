@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="fir_coeff"/>
+		<item value="adc_samples"/>
+		<item value="HAL_NVIC_EnableIRQ"/>
+		<item value="HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);"/>
+	</list>
+</section>

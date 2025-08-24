@@ -1,0 +1,17 @@
+18:32:21 **** Incremental Build of configuration Debug for project ESPSLab3 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+arm-none-eabi-gcc -o "ESPSLab3.elf" @"objects.list"   -mcpu=cortex-m4 -T"V:\Prajwal\Softwares\ESPS\STM32CubeIDE_1.18.1\Lab\ESPSLab3\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESPSLab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ESPSLab3.elf
+ 
+arm-none-eabi-size  ESPSLab3.elf 
+arm-none-eabi-objdump -h -S ESPSLab3.elf  > "ESPSLab3.list"
+   text	   data	    bss	    dec	    hex	filename
+  19184	     12	   1780	  20976	   51f0	ESPSLab3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ESPSLab3.list
+ 
+
+18:32:24 Build Finished. 0 errors, 0 warnings. (took 3s.406ms)
+
